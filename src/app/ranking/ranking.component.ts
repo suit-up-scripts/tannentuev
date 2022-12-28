@@ -73,8 +73,7 @@ export class RankingComponent implements OnInit{
 
   ngOnInit(): void {
     this.rankingService.getRanking().subscribe( (res) => {
-      console.log("done");
-      console.log(res);
+      // sort
     })
   }
 
