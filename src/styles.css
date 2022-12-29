@@ -28,7 +28,10 @@ body {
     color: black;
     text-shadow: none;
 }
-
+.ranking .apexcharts-canvas {
+    margin-left: auto;
+    margin-right: auto;
+}
 
 /*
  * Header

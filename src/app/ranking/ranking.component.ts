@@ -43,10 +43,9 @@ export class RankingComponent implements OnInit{
       ],
       chart: {
         type: "bar",
-        height: 700,
-        width: 1200,
         fontFamily: 'Helvetica, Arial, sans-serif',
-        foreColor: 'white'
+        foreColor: 'white',
+        width: '85%'
       },
       plotOptions: {
         bar: {
@@ -112,9 +111,10 @@ export class RankingComponent implements OnInit{
         ],
         chart: {
           type: "bar",
-          width: 1200,
           fontFamily: 'Helvetica, Arial, sans-serif',
           foreColor: 'white',
+          height: Math.floor(100+900*(res.length/30)),
+          width: '85%'
         },
         plotOptions: {
           bar: {
@@ -126,12 +126,12 @@ export class RankingComponent implements OnInit{
         },
         xaxis: {
           labels: {
-            style: {
-              colors: [],
-              fontSize: '16px',
-              fontFamily: 'Helvetica, Arial, sans-serif',
-              fontWeight: 400,
-            },
+            show: false
+          },
+          min: 0,
+          max: 30,
+          axisTicks: {
+            show: false
           }
         },
         yaxis: {

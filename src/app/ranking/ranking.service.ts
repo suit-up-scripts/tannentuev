@@ -13,8 +13,8 @@ export class RankingService {
 
 
   public getRanking(): Observable<any> {
-         const url = "https://docs.google.com/spreadsheets/d/e/2PACX-1vRCSJ1dIzH1celCMVWqpMmhd9VgvrioawsC8E1Vz7BlIeqzYIJ5Hywkk9EfYH15Kx9nbAUsBKEY6ER9/pub?output=csv";
-        
+        const url = "https://docs.google.com/spreadsheets/d/e/2PACX-1vRCSJ1dIzH1celCMVWqpMmhd9VgvrioawsC8E1Vz7BlIeqzYIJ5Hywkk9EfYH15Kx9nbAUsBKEY6ER9/pub?output=csv";
+        //const url = "https://docs.google.com/spreadsheets/d/e/2PACX-1vR82styIru_NGDe_tjO8VGrWA8Cn3BtOiLadewkr4Qj1YpOytjHGJiOQwRuCHc1Xn_jtLMQrnLFSRPG/pub?output=csv"
             return this.http.get(url, {responseType: "text"})
               .pipe(
                 map((res: any) => {
