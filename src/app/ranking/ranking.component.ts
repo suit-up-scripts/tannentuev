@@ -72,7 +72,14 @@ export class RankingComponent implements OnInit{
   }
 
   ngOnInit(): void {
-    this.rankingService.getRanking().subscribe( (res: any[]) => {
+    this.rankingService.getRanking().subscribe( (results: any[]) => {
+      
+      let res: any[] = [];
+      for(let i = 0; i < results.length; i++) {
+        if (results[i]['Name des Haushalts']) {
+          res.push(results[i]);
+        }
+      }
       // sort
       for(let i = 0; i < res.length; i++) {
         res[i]['pos'] = i+1;
