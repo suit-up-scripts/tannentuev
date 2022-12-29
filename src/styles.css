@@ -24,6 +24,10 @@ body {
   height: 100%;
 }
 
+.apexcharts-tooltip {
+    color: black;
+    text-shadow: none;
+}
 
 
 /*
