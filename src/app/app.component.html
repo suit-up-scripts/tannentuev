@@ -4,7 +4,8 @@
       <div>
         <h3 class="float-md-start mb-0">Tannen TÜV</h3>
         <nav class="nav nav-masthead justify-content-center float-md-end">
-          <a class="nav-link active" aria-current="page" href="#">2023</a>
+          <a class="nav-link" [ngClass]="{'active': activeYear===2022}" (click)="onYearChanged(2022)" href="#">2022</a>
+          <a class="nav-link" [ngClass]="{'active': activeYear===2023}" (click)="onYearChanged(2023)" aria-current="page" href="#">2023</a>
         </nav>
       </div>
     </header>
@@ -12,7 +13,7 @@
     <main class="px-3">
       <h1>Ranking</h1>
     </main>
-    <app-ranking></app-ranking>
+    <app-ranking [year]="activeYear"></app-ranking>
 
     <footer class="mt-auto text-white-50">
       <p>©Tannen TÜV 2023</p>

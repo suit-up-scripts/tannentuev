@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit, ViewChild, Input } from '@angular/core';
 import { RankingService } from './ranking.service';
 import {
   ApexAxisChartSeries,
@@ -32,6 +32,22 @@ export class RankingComponent implements OnInit{
 
   public chartOptions: ChartOptions;
   public data: any[] = [];
+
+  private _year: number = 2023;
+    
+  @Input() set year(value: number) {
+  
+     this._year = value;
+     this.initializeGraph();
+  
+  }
+  
+  get year(): number {
+  
+      return this._year;
+  
+  }
+
 
   constructor(private rankingService: RankingService) {
     this.chartOptions = {
@@ -70,8 +86,8 @@ export class RankingComponent implements OnInit{
     };
   }
 
-  ngOnInit(): void {
-    this.rankingService.getRanking().subscribe( (results: any[]) => {
+  initializeGraph(): void {
+    this.rankingService.getRanking(this.year).subscribe( (results: any[]) => {
       
       let res: any[] = [];
       for(let i = 0; i < results.length; i++) {
@@ -152,6 +168,10 @@ export class RankingComponent implements OnInit{
         }
       };
     })
+  }
+
+  ngOnInit(): void {
+    this.initializeGraph();
   }
 
 }

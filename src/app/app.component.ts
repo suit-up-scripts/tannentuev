@@ -7,4 +7,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'tannentuev';
+  activeYear: number = 2023;
+
+
+  onYearChanged(year: number) {
+    this.activeYear = year;
+  }
+
 }
