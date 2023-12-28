@@ -14,7 +14,7 @@ export class RankingService {
 
   public getRanking(): Observable<any> {
 
-        const url = "https://docs.google.com/spreadsheets/d/e/2PACX-1vQ7xudpR1kIPwvozIwZbh4t4iLeN4gPzj4GkpDh01UDsXRrdZLVyb5TkbGs6RNxR-b8pi_8DRKQZ79f/pub?&output=csv"
+        const url = "https://docs.google.com/spreadsheets/d/e/2PACX-1vQZc7XjrwB0_6xMlFRhsg7UQO3FX5tbi7rHqU5fiN88F3NhDzNTattnVpxPn2FdOpRxPdLXPW-tS9jw/pub?output=csv"
         //2022
         //const url = "https://docs.google.com/spreadsheets/d/e/2PACX-1vRCSJ1dIzH1celCMVWqpMmhd9VgvrioawsC8E1Vz7BlIeqzYIJ5Hywkk9EfYH15Kx9nbAUsBKEY6ER9/pub?output=csv";
             return this.http.get(url, {responseType: "text"})
