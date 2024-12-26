@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'tannentuev';
-  activeYear: number = 2023;
+  activeYear: number = 2024;
 
 
   onYearChanged(year: number) {
