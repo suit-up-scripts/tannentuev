@@ -18,8 +18,11 @@ export class RankingService {
         if(year === 2022) {
           url = "https://docs.google.com/spreadsheets/d/e/2PACX-1vRCSJ1dIzH1celCMVWqpMmhd9VgvrioawsC8E1Vz7BlIeqzYIJ5Hywkk9EfYH15Kx9nbAUsBKEY6ER9/pub?output=csv";
         }
-        else {
+        else if (year === 2023) {
           url = "https://docs.google.com/spreadsheets/d/e/2PACX-1vQZc7XjrwB0_6xMlFRhsg7UQO3FX5tbi7rHqU5fiN88F3NhDzNTattnVpxPn2FdOpRxPdLXPW-tS9jw/pub?output=csv";
+        }
+        else {
+          url = "https://docs.google.com/spreadsheets/d/e/2PACX-1vSVhVTfIWDWramWAvkmST_-bHOX32-_qKcOxDjKRACpIUQypriDGF3HC5ypUCcGiXNo1B_paXWYxdqa/pub?output=csv";
         }
         //2023
         //const url = "https://docs.google.com/spreadsheets/d/e/2PACX-1vQZc7XjrwB0_6xMlFRhsg7UQO3FX5tbi7rHqU5fiN88F3NhDzNTattnVpxPn2FdOpRxPdLXPW-tS9jw/pub?output=csv"

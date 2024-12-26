@@ -33,7 +33,7 @@ export class RankingComponent implements OnInit{
   public chartOptions: ChartOptions;
   public data: any[] = [];
 
-  private _year: number = 2023;
+  private _year: number = 2024;
     
   @Input() set year(value: number) {
   
